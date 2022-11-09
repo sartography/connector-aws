@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "spiffworkflow-connector-aws"
+version = "0.1.0"
+description = "Connect Service Tasks to AWS web services."
+authors = ["Dan <daniel.h.funk@gmail.com>"]
+readme = "README.md"
+packages = [{include = "connector_aws",  from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+simplejson = "^3.17.6"
+boto3 = "^1.26.5"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.0"
+moto = "^4.0.9"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  ".", "src",
+]
