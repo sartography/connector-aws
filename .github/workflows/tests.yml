@@ -32,6 +32,6 @@ jobs:
           path: .venv
           key: pydeps-${{ matrix.python-version }}-${{ hashFiles('**/poetry.lock') }}
       - run: poetry install --no-interaction --no-root
-         if: steps.cache-deps.outputs.cache-hit != 'true'
+        if: steps.cache-deps.outputs.cache-hit != 'true'
       - run: poetry install --no-interaction
       - run: poetry run pytest
