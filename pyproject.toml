@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "spiffworkflow-connector-aws"
+name = "connector-aws"
 version = "0.1.0"
 description = "Connect Service Tasks to AWS web services."
 authors = ["Dan <daniel.h.funk@gmail.com>"]
